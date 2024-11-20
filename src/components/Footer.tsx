@@ -17,17 +17,17 @@ export default function Footer({ setShowModal, showModal, data }: ModalProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="z-50 absolute flex flex-row top-0 left-0 w-full h-full p-4 shadow-md"
+        className="z-40 absolute w-full flex flex-row bottom-0 left-0 p-4 shadow-md"
       >
         <div className="flex flex-col">
-          <h1 className="uppercase text-[1.5rem] text-[#bdbdbd] select-none font-extralight w-fit">
-            apod project
+          <h1 className="uppercase text-[0.8rem] sm:text-[1.5rem] md:text-[2rem]  text-[#bdbdbd] select-none font-extralight w-fit">
+            astronomy picture of the day
           </h1>
-          <p className="uppercase text-[3rem] text-white select-none w-fit">
+          <p className="uppercase text-[1.3rem]  sm:text-[3rem] md:text-[2rem]  text-white select-none w-fit font-bold">
             {data?.title}
           </p>
         </div>
-        <div className="ml-auto mr-16 flex items-end">
+        <div className="md:ml-auto absolute bottom-0 right-0 md:static md:mr-16 flex items-end">
           {!showModal && (
             <button
               className="rounded-full transition"
