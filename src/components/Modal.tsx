@@ -12,6 +12,8 @@ type ModalProps = {
 export default function Modal({ setShowModal, data }: ModalProps) {
   const ref = useRef(null);
 
+  console.log(ref);
+
   useOnClickOutside(ref, () => setShowModal(false));
 
   return (
