@@ -29,13 +29,13 @@ export default function Modal({ setShowModal, data }: ModalProps) {
       >
         <MdClose size={25} className="text-white" />
       </button>
-      <div className="flex flex-col overflow-hidden">
+      <div className="flex flex-col h-full">
         <h1 className="text-white sm:text-[25px] md:text-3xl mb-5 font-bold uppercase">
           {data?.title}
         </h1>
         <span className="text-[#e6e6e6] mb-12">{data?.date}</span>
-        <div className="max-h-screen overflow-y-scroll">
-          <p className="text-[#cecece] text-sm md:text-lg first-letter:uppercase">
+        <div className="h-full overflow-y-scroll lg:overflow-y-hidden">
+          <p className="text-[#cecece] h-full text-sm md:text-lg first-letter:uppercase">
             {data?.explanation}
           </p>
         </div>
