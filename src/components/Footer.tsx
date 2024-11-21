@@ -11,7 +11,7 @@ type ModalProps = {
 
 export default function Footer({ setShowModal, showModal, data }: ModalProps) {
   return (
-    <div className="w-screen h-32  fixed bottom-0 left-0">
+    <div className="w-screen h-32  absolute bottom-0 left-0">
       <div className="w-full z-0 h-full bg-gradient-to-t from-black to-transparent" />
       <motion.div
         initial={{ opacity: 0 }}

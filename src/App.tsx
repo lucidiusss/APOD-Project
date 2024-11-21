@@ -40,23 +40,15 @@ function App() {
   }, []);
 
   return (
-    <>
-      <>
-        {data ? <Main {...data} /> : <div>loading...</div>}
-        <AnimatePresence>
-          {showModal && data && (
-            <Modal data={data} setShowModal={setShowModal} />
-          )}
-        </AnimatePresence>
-        {data && (
-          <Footer
-            data={data}
-            setShowModal={setShowModal}
-            showModal={showModal}
-          />
-        )}
-      </>
-    </>
+    <main className="relative">
+      {data ? <Main {...data} /> : <div>loading...</div>}
+      <AnimatePresence>
+        {showModal && data && <Modal data={data} setShowModal={setShowModal} />}
+      </AnimatePresence>
+      {data && (
+        <Footer data={data} setShowModal={setShowModal} showModal={showModal} />
+      )}
+    </main>
   );
 }
 
